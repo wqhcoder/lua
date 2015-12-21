@@ -743,6 +743,7 @@ f()
 print(i)
 ]]
 
+--[[
 i = 10
 print("test loadfile")
 for i = 1, 2 do
@@ -756,7 +757,26 @@ print("test require")
 for i = 1, 2 do
 	require("test")
 end
+]]
 
+--require("T.tt")
+
+--[[
+require("test")
+print(_LOADED["test"])
+]]
+
+--[[
+print(loadlib())
+]]
+
+--[[
+print("enter a numner:")
+assert(io.read("*number", "invalid input"))
+]]
+
+local status, err = pcall(function() error({code = 121}) end)
+print(err.code)
 
 
 

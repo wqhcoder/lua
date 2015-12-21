@@ -3,4 +3,7 @@
 <Project Name="TT.luaprj" >
     <LuaFile RelativePath=".\ttt.lua" />
     <LuaFile RelativePath=".\test.lua" />
+    <Filter Name="T" Directory=".\T" >
+        <LuaFile RelativePath=".\T\tt.lua" />
+    </Filter>
 </Project>
