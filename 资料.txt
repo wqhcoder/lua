@@ -1,0 +1,3 @@
+http://lua-users.org/
+http://www.yiibai.com/lua/
+ÔÆ·çµÄlua¼¼ÇÉ£ºhttp://blog.codingnow.com/cloud/LuaTips

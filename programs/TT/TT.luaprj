@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Project Name="TT.luaprj" >
+    <LuaFile RelativePath=".\ttt.lua" />
+    <LuaFile RelativePath=".\test.lua" />
+</Project>
