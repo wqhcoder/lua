@@ -775,10 +775,52 @@ print("enter a numner:")
 assert(io.read("*number", "invalid input"))
 ]]
 
+--[[
 local status, err = pcall(function() error({code = 121}) end)
 print(err.code)
+]]
 
+--[[
+foo = function ()
+	print(debug.traceback())
+end
+foo()
+]]
 
+--[[
+co = coroutine.create(
+    function()
+		print("foo function")
+	end)
+print(co)
+print(coroutine.status(co))
+
+coroutine.resume(co)
+print(coroutine.status(co))
+]]
+
+co = coroutine.create(
+    function()
+		for i = 1, 3 do
+			print("co", i)
+			coroutine.yield()
+		end
+	end
+)
+print(co)
+print(coroutine.status(co)) -- suspended
+coroutine.resume(co)
+print(coroutine.status(co))
+coroutine.resume(co)
+print(coroutine.status(co))
+coroutine.resume(co)
+print(coroutine.status(co))
+coroutine.resume(co)
+print(coroutine.status(co))  -- dead
+print(coroutine.status(co))  -- dead
+print(coroutine.status(co))  -- dead
+print(coroutine.status(co))  -- dead
+print(coroutine.status(co))  -- dead
 
 
 
